@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage{
           steps{
-            echo "Hello"
+            echo "Hello rubel"
           }
         }
         stage{
