@@ -1,0 +1,27 @@
+@Library("Shared") _
+pipeline{
+    agent any
+    stages{
+        stage{
+            steps{
+                script{
+                    code()
+                }
+            }
+        }
+        stage{
+            steps{
+                script{
+                    build()
+                }
+            }
+        }
+        stage{
+            steps{
+                script{
+                    deploy()
+                }
+            }
+        }
+    }
+}
