@@ -3,11 +3,6 @@ pipeline{
     agent any
     stages{
         stage{
-          steps{
-            echo "Hello rubel"
-          }
-        }
-        stage{
             steps{
                 script{
                     code()
