@@ -3,6 +3,11 @@ pipeline{
     agent any
     stages{
         stage{
+          steps{
+            echo "Hello"
+          }
+        }
+        stage{
             steps{
                 script{
                     code()
