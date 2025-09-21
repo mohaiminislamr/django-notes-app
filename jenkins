@@ -19,7 +19,7 @@ pipeline{
         stage("build"){
             steps{
                 script{
-                    build("notes-app")
+                    build("notes-app","latest")
                 }
             }
         }
