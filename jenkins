@@ -9,10 +9,17 @@ pipeline{
                 }
             }
         }
+        stage("clone"){
+            steps{
+                script{
+                    code("https://github.com/mohaiminislamr/django-notes-app.git","main")
+                }
+            }
+        }
         stage("build"){
             steps{
                 script{
-                    code()
+                    build("notes-app")
                 }
             }
         }
