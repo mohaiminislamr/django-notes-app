@@ -1,28 +1,24 @@
 @Library("Shared") _
-
-pipeline {
+pipeline{
     agent any
-
-    stages {
-        stage('Code') {
-            steps {
-                script {
+    stages{
+        stage("hello"){
+            steps{
+                script{
+                    hello()
+                }
+            }
+        }
+        stage("build"){
+            steps{
+                script{
                     code()
                 }
             }
         }
-
-        stage('Build') {
-            steps {
-                script {
-                    build()
-                }
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                script {
+        stage("deploy"){
+            steps{
+                script{
                     deploy()
                 }
             }
